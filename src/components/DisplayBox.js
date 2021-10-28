@@ -1,6 +1,13 @@
 import React from "react";
+import { useState } from "react";
 
 function DisplayBox(props) {
+  const [start, setStart] = useState(true);
+
+  function startButton(evt) {
+    setStart(false);
+  }
+
   return (
     <div id="display">
       <div class="display-boxes">
@@ -16,9 +23,20 @@ function DisplayBox(props) {
         <button>West</button>
       </div>
       <div class="display-boxes">
-          <button>Start a Game!</button>
-          <button>Guess the Spot!</button>
-          <button>I Give Up!</button>
+        <button
+          id="start"
+          type="button"
+          onClick={startButton}
+          disabled={!start}
+        >
+          Start a Game!
+        </button>
+        <button id="start" type="button" disabled={start}>
+          Guess the Spot!
+        </button>
+        <button id="start" type="button" disabled={start}>
+          I Give Up!
+        </button>
       </div>
       <div class="display-boxes">
         <p>Score: scoreVariable</p>
