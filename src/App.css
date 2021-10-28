@@ -2,7 +2,14 @@
   display: flex;
 }
 
-
+#display {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 120px 120px 120px 120px;
+  height: 600px;
+  width: 450px;
+  border: 1px solid black;
+}
 
 
 
