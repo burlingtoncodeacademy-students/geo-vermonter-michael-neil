@@ -2,6 +2,15 @@ import { MapContainer, TileLayer, Polygon, Marker, Polyline } from "react-leafle
 import borderData from "../data/border";
 
 function Map(props) {
+
+
+  let randomLat = Math.random() * (45.005419 - 42.730315) + 42.730315; 
+    console.log(randomLat)
+
+  let randomLong =  Math.random() * ((-71.510225) - (-73.35218)) + (-73.35218);
+    console.log(randomLong)  
+
+
   let vtOutline = borderData.geometry.coordinates[0].map(coords => [coords[1], coords[0]])
 
   return (
@@ -12,6 +21,7 @@ function Map(props) {
       doubleClickZoom={false}
       zoomControl={false}
       touchZoom={false}
+      dragging={false}
       style={{ height: "600px", width: "600px" }}
     >
       <TileLayer
