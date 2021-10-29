@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import ModalBox from "./ModalBox"
 
 function DisplayBox(props) {
   const [start, setStart] = useState(true);
@@ -9,9 +10,12 @@ function DisplayBox(props) {
   }
 
   return (
+
+  
     <div id="display">
       <div class="display-boxes">
-        <p>put info here</p>
+     <ModalBox show={true}/> 
+        
       </div>
       <div class="display-boxes">
         <p>latitude, long, county, town</p>
@@ -32,7 +36,7 @@ function DisplayBox(props) {
           Start a Game!
         </button>
         <button id="start" type="button" disabled={start}>
-          Guess the Spot!
+          Guess the Spot! 
         </button>
         <button id="start" type="button" disabled={start}>
           I Give Up!
